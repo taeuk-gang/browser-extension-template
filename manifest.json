@@ -1,0 +1,47 @@
+{
+  "name": "__MSG_APP_NAME__",
+  "description": "__MSG_APP_DESCRIPTION__",
+  "version": "1.0.0",
+  "default_locale": "ko",
+  "manifest_version": 3,
+  "icons": {
+    "128": "img/logo-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "img/logo-128.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "./content.js"
+      ],
+      "css": [
+        "./content.css"
+      ],
+      "run_at": "document_start",
+      "matches": [
+        "https://www.google.com/*"
+      ]
+    }    
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [],
+      "resources": [
+        "img/logo-128.png"
+      ],
+      "use_dynamic_url": false
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [],
+  "commands": {}
+}
