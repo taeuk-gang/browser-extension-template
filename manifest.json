@@ -21,7 +21,7 @@
       ],
       "run_at": "document_start",
       "matches": [
-        "https://www.google.com/*"
+        "https://n.news.naver.com/*"
       ]
     }    
   ],
