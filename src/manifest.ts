@@ -24,13 +24,13 @@ export default defineManifest(async (env) => ({
       : [
           {
             run_at: 'document_start',
-            matches: ['https://www.google.com/'],
+            matches: ['<all_urls>'],
             js: ['public/js/webcomponent.js'],
           },
         ]),
     {
       run_at: 'document_end',
-      matches: ['https://www.google.com/'],
+      matches: ['<all_urls>'],
       js: ['src/content/index.ts'],
     },
   ],
