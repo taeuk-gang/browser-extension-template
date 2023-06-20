@@ -39,9 +39,13 @@
     }
   ],
   "permissions": [
+    "bookmarks",
     "activeTab",
-    "scripting"
+    "tabs"
   ],
+  "omnibox": {
+    "keyword": "bm"
+  },
   "host_permissions": [],
   "commands": {}
 }
